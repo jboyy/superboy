@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Purple Buzz HTML Template with Bootstrap 5 Beta 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="/static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="/static/assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/assets/css/custom.css">
+   
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Purple</span> <span class="text-primary h4">Buzz</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/blog">blog</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <h4 class ="col">welcome {{user.first_name}}</h4>
+                         <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/logout">logout</a>
+                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link btn-outline-primary rounded-pill px-3" href="{% url 'blog-create' %}">newpost</a>
+                       </li>
+                       {% else %}
+                       <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="/login">login</a>
+                       </li>
+                        <li class="nav-item">
+                                 <a class="nav-link btn-outline-primary rounded-pill px-3" href="/register">register</a>
+                         </li>
+
+                           <li class="nav-item">
+                          <a class="nav-link btn-outline-primary rounded-pill px-3" href="/about">about</a>
+                                </li>
+                          <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/contact">contact us</a>
+                        </li>
+                            
+                                 </ul>
+                    {% endif %}
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+<!-- Start Choice -->
+<section class="why-us banner-bg bg-light">
+    <div class="container my-4">
+        <div class="row">
+            <div class="banner-img col-lg-5">
+                <img src="/static/./assets/img/work.svg" class="rounded img-fluid" alt="">
+            </div>
+            <div class="banner-content col-lg-7 align-self-end">
+                <h2 class="h2 pb-3">Why you choose us?</h2>
+                <p class="text-muted pb-5 light-300">
+                You are allowed to download and use this Purple Buzz template for your websites. You are <strong>not allowed</strong> to re-distribute this template ZIP file on other template websites. It is quite easy to simply copy and repost the ZIP file on any <a rel="nofollow" href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> websites.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Choice -->
+
+<!-- Start Aim -->
+<section class="banner-bg bg-white py-5">
+    <div class="container my-4">
+        <div class="row text-center">
+
+            <div class="objective col-lg-4">
+                <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                    <i class="display-4 bx bxs-bulb text-light"></i>
+                </div>
+                <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Vision</h2>
+                <p class="light-300">
+                    Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse commodo viverra.
+                </p>
+            </div>
+
+            <div class="objective col-lg-4 mt-sm-0 mt-4">
+                <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                    <i class='display-4 bx bx-revision text-light'></i>
+                </div>
+                <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Mission</h2>
+                <p class="light-300">
+                    Eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam quis.
+                </p>
+            </div>
+
+            <div class="objective col-lg-4 mt-sm-0 mt-4">
+                <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                    <i class="display-4 bx bxs-select-multiple text-light"></i>
+                </div>
+                <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Goal</h2>
+                <p class="light-300">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Aim -->
+
+   
+                               
+    {% block content %}
+    {% endblock %}    
+    </body>
+</html>

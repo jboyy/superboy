@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+  <head>
+    <title></title>
+    
+    </head>
+  <body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class ="alert alert-{{message.tag}}">{{message}}</div>
+    {% endfor %}
+    {% endif %}
+   <div class ="content-section">
+      <form   method="POST" enctype ='multipart/form-data'>
+        {% csrf_token %}
+          <fieldset = "form-group">
+            <legend class = "border-bottom mb-4 "> blog-post
+
+            </legend>
+            {{ form.as_p }}
+<div class ="form-group">
+  <input type = "submit" value = "post">
+</div>
+        </fieldset>
+        
+   
+  </form>  
+ </div> 
+  </body>
+  </html>
+  {% endblock content %}

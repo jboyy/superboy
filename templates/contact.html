@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contact-bg">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="contactheading">
+               <h3>contact Us</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+      <!-- section -->
+      {% if messages %}
+      {% for message in messages %}
+       <div class ="alert alert-{{message.tag}}">{{message}}</div>
+      {% endfor %}
+      {% endif %}
+      <section class="layout_padding">
+         <div class="container">
+           
+            
+            
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full comment_form">
+                     <form  action = ""  method = "post">
+                        {% csrf_token %}
+                        <fieldset>
+                           <div class="col-md-12">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <input type="text" name="first_name" placeholder="First_Name" required="#" />
+                                    <input type="text" name="last_name" placeholder="Last_Name" required="#" />
+                              
+                              
+                                    
+                                    <input type="email" name="email" placeholder="Email" required="#" />
+                                     <input type="text" name="subject" placeholder="subject" required="#" />
+                                 </div>
+                                 <div class="col-md-6">
+                                    <textarea class="wdt" name = "message" placeholder="message"></textarea>
+                                 </div>
+                              </div>
+                              <div class="row margin_top_30">
+                                 <div class="col-md-12">
+                                    <div class="center">
+                                       <button>send</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+ {% endblock content %}
+   

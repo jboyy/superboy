@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class = "space">
+   <div class="section layout_padding   ">
+    <div class="container">
+       
+                 <div class="row">
+                    <div class="col-md-1">
+                       <img src="{{user.profile.image.url}}"width ="50"height ="50" alt="#" />
+                    </div>
+                    <div class="col-md-9">
+                       <div class="full contact_text">
+                        <h4> firstname = {{user.first_name}}</h4>
+                        <h4>lastname = {{user.last_name}}</h4>
+                        <h4> username = {{user.username}} </h4>
+                        <h4>email = {{user.email}}</h4>
+                          
+                       </div>
+                    </div>
+                    <div class="col-md-5">
+
+                    </div>
+                 </div>
+             </div>
+      </section>
+    </div>
+    <!-- section -->
+
+    
+   
+    <form   method="POST" enctype ="multipart/form-data">
+          {% csrf_token %}
+    <fieldset = "form-group">
+     <legend class = "border-bottom mb-4 "> update profile </legend>
+              {{ u_form.as_p }}
+              {{ p_form.as_p }}
+  <div class ="form-group">
+    <input type = "submit" value = "update">
+  </div>
+          </fieldset>
+        
+  
+     
+    </form>  
+   </div> 
+</body>
+</html>
+{% endblock content %}

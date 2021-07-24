@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+  <head>
+   
+    </head>
+  <body>
+  {% if messages %}
+  {% for message in messages %}
+  <div class ="alert alert-{{message.tag}}">{{message}}</div>
+  {% endfor %}
+  {% endif %}
+ <div class ="content-section">
+    <form   method="POST">
+      {% csrf_token %}
+        <fieldset = "form-group">
+          <legend class = "border-bottom mb-4 "> Delete post
+
+          </legend>
+
+         <h2> Are u sure u want to delete this post  "{{ object.title }}" </h2> 
+         
+<div class ="form-group">
+<button class = "btn btn-outline-danger" type = "submit" > yes,delete</button>
+
+<a class = "btn btn-outline-secondary" href = "{% url 'blog-detail' object.pk %}" > cancel</button>
+</div>
+      </fieldset>
+      
+ 
+</form>  
+</div> 
+</body>
+</html>
+{% endblock content %}
